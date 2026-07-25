@@ -69,7 +69,7 @@ function Tick() {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="section" aria-labelledby="pricing-title">
+    <section id="pricing" className="section cv-auto" aria-labelledby="pricing-title">
       <div className="container">
         <div className="section-head" data-reveal>
           <p className="eyebrow">Waypoint 03 — Alt 3,500 m</p>

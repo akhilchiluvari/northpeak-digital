@@ -23,7 +23,7 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="section" aria-labelledby="faq-title">
+    <section id="faq" className="section cv-auto" aria-labelledby="faq-title">
       <div className="container">
         <div className="section-head" data-reveal>
           <p className="eyebrow">Waypoint 04 — Alt 4,200 m</p>

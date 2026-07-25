@@ -36,11 +36,12 @@ export default function Header() {
       </a>
       <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
         <div className="container header-inner">
-          <a className="wordmark" href="#top" aria-label="NorthPeak Digital — back to top">
+          <a className="wordmark" href="#top">
             NorthPeak
             <span className="degree" aria-hidden="true">
               °
             </span>
+            <span className="visually-hidden"> Digital — back to top</span>
           </a>
           <nav className="primary-nav" aria-label="Primary">
             <ul>

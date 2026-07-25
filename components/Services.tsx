@@ -71,7 +71,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section" aria-labelledby="services-title">
+    <section id="services" className="section cv-auto" aria-labelledby="services-title">
       <div className="container">
         <div className="section-head" data-reveal>
           <p className="eyebrow">Waypoint 01 — Alt 1,400 m</p>

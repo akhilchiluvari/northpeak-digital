@@ -30,7 +30,7 @@ const cases = [
 
 export default function Results() {
   return (
-    <section id="results" className="section results" aria-labelledby="results-title">
+    <section id="results" className="section results cv-auto" aria-labelledby="results-title">
       <div className="container">
         <div className="section-head" data-reveal>
           <p className="eyebrow">Waypoint 02 — Alt 2,600 m</p>

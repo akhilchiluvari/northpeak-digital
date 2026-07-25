@@ -13,7 +13,7 @@
   --paper-raised: #fbfcf9; /* cards on paper                  */
   --ink: #101915;          /* spruce ink — near-black, green  */
   --ink-soft: #3d4a43;     /* body text                       */
-  --ink-faint: #5d6b63;    /* captions, hints                 */
+  --ink-faint: #55635b;    /* captions, hints (AA on paper)   */
   --line: #d3dcd2;         /* hairlines                       */
   --line-strong: #b7c3b8;
   --glacier: #0e6f5c;      /* accent — links, buttons, marks  */
@@ -182,6 +182,13 @@ button {
   margin-top: 1rem;
   color: var(--ink-soft);
   font-size: var(--fs-body);
+}
+
+/* Below-the-fold sections skip layout/paint work until scrolled near.
+   contain-intrinsic-size keeps scrollbar + anchor jumps stable. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 
 /* mono waypoint eyebrow — the ascent structure */
@@ -973,7 +980,7 @@ button {
 
 .field .hint {
   font-weight: 400;
-  color: var(--ink-faint);
+  color: var(--ink-soft);
 }
 
 .field input,
@@ -1095,12 +1102,15 @@ button {
   list-style: none;
   padding: 0;
   display: grid;
-  gap: 0.55rem;
+  gap: 0.2rem;
 }
 
 .footer-col a {
   color: var(--snow-muted);
   text-decoration: none;
+  /* standalone links need a ≥24px hit target (WCAG 2.2) */
+  display: inline-block;
+  padding-block: 0.3rem;
 }
 
 .footer-col a:hover {
@@ -1238,13 +1248,31 @@ button {
   animation-delay: var(--rise, 0ms);
 }
 
+/* The H1 is the LCP element: animate transform only so the text is
+   painted (and counted) immediately — never fade the largest element. */
+@keyframes rise-in-solid {
+  from {
+    translate: 0 18px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+.hero [data-rise-solid] {
+  animation: rise-in-solid 700ms var(--ease-out) both;
+  animation-delay: var(--rise, 0ms);
+}
+
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .hero [data-rise] {
+  .hero [data-rise],
+  .hero [data-rise-solid] {
     animation: none;
   }
 

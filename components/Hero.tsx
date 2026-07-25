@@ -9,7 +9,7 @@ export default function Hero() {
           <p className="eyebrow" data-rise style={{ "--rise": "0ms" } as React.CSSProperties}>
             Basecamp — Alt 0 m
           </p>
-          <h1 id="hero-title" data-rise style={{ "--rise": "80ms" } as React.CSSProperties}>
+          <h1 id="hero-title" data-rise-solid style={{ "--rise": "80ms" } as React.CSSProperties}>
             Websites that <span className="accent">climb</span>.
           </h1>
           <p className="lede" data-rise style={{ "--rise": "170ms" } as React.CSSProperties}>
