@@ -25,7 +25,7 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://northpeak-digital.netlify.app";
+const SITE_URL = "https://northpeak-digital-demo.netlify.app";
 const DESCRIPTION =
   "NorthPeak Digital is a small web studio for brands with steep ambitions — Shopify stores and marketing sites that load fast, rank well, and sell. Live in weeks, not quarters.";
 

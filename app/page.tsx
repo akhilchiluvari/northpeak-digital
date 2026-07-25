@@ -17,7 +17,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "NorthPeak Digital",
-  url: "https://northpeak-digital.netlify.app",
+  url: "https://northpeak-digital-demo.netlify.app",
   description:
     "A small web studio building Shopify stores and marketing sites that load fast, rank well, and sell.",
   email: "hello@northpeak.digital",
