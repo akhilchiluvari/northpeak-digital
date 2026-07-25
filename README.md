@@ -5,7 +5,7 @@
 A responsive one-page website for **NorthPeak Digital**, a fictional web & Shopify studio —
 built for the **Digital Heroes internship qualification task (Web Development, Tasks A + B)**.
 
-- **Live site:** https://northpeak-digital.netlify.app <!-- update if the site name changes -->
+- **Live site:** https://northpeak-digital-demo.netlify.app
 - **Lighthouse:** mobile **99 / 100 / 100 / 100** · desktop **100 / 100 / 100 / 100**
   ([reports](docs/lighthouse/) · [optimization changelog](OPTIMIZATION-CHANGELOG.md))
 

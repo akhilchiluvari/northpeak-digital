@@ -13,19 +13,18 @@ Deadline: **24 hours from receiving the brief.** Work through this top to bottom
    ```
    (Windows will pop a browser window to sign in the first time.)
 
-**Netlify**
-1. app.netlify.com → **Add new site → Import an existing project → GitHub** → pick
-   `northpeak-digital`. Build command and publish folder are read from `netlify.toml`
-   automatically (`npm run build` / `out`). Deploy.
-2. **Site configuration → Site details → Change site name** → `northpeak-digital`
-   (URL becomes `northpeak-digital.netlify.app`). If taken, pick close (e.g.
-   `northpeak-studio`) and update the URL in `README.md`, `app/layout.tsx`
-   (`SITE_URL`), and `app/page.tsx` (JSON-LD), then commit + push.
-3. **IMPORTANT — Forms:** Site configuration → Forms → **Enable form detection**, then
-   trigger a redeploy (Deploys → Trigger deploy). Without this, submissions go nowhere.
-4. Test on the live URL: submit the form once with a real message, then check
-   Netlify → Forms → `contact` shows your submission. Also try submitting empty to see
-   the validation errors.
+**Netlify — site already live as `northpeak-digital-demo.netlify.app`, form detection enabled ✓**
+
+What remains is one redeploy (registers the form AND ships the corrected canonical URLs):
+1. If the site is **connected to the GitHub repo**: just push (step above) — it
+   auto-deploys. Otherwise (drag-and-drop deploy): run `npm run build`, then drag the
+   `out` folder onto the site's **Deploys** page again.
+2. Optional but recommended: connect the repo (Project configuration → Build & deploy →
+   **Link repository**) so every push deploys — build command and publish folder come
+   from `netlify.toml` automatically.
+3. Test on the live URL: submit the form once with a real message → you should see the
+   "You're on the board." success state → check Netlify → **Forms → contact** for the
+   submission. Also submit empty once to show the validation errors work.
 
 ## 2. Lighthouse screenshots (required Task B deliverable)
 
@@ -63,7 +62,7 @@ WebDevelopment_AkhilChiluvari/
 ```
 
 **SUBMISSION-NOTE contents (make this a short doc, first file in the folder):**
-- Live site: `https://northpeak-digital.netlify.app`
+- Live site: `https://northpeak-digital-demo.netlify.app`
 - GitHub repo: `https://github.com/<YOUR_USERNAME>/northpeak-digital`
 - Loom: `<link>`
 - **AI usage (required):** copy the "AI usage" paragraph from `README.md`.
@@ -84,7 +83,7 @@ WebDevelopment_AkhilChiluvari/
 
    > Hi! Submitting my Web Development qualification task (Task A + B).
    > Drive folder (everything inside): `<drive link>`
-   > Live site: https://northpeak-digital.netlify.app
+   > Live site: https://northpeak-digital-demo.netlify.app
    > Repo: https://github.com/<YOUR_USERNAME>/northpeak-digital
    > Loom: `<loom link>`
    > — Akhil Chiluvari
